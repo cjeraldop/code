@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/src"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/cascading-1.0.9/cascading-1.0.9.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/cascading-1.0.9/cascading-core-1.0.9.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/cascading-1.0.9/cascading-test-1.0.9.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/cascading-1.0.9/cascading-xml-1.0.9.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/commons-cli-1.2/commons-cli-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/commons-cli-1.2/commons-cli-1.2-sources.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/commons-cli-1.2/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/hadoop-0.18.3/hadoop-0.18.3-ant.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/hadoop-0.18.3/hadoop-0.18.3-core.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/hadoop-0.18.3/hadoop-0.18.3-examples.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/hadoop-0.18.3/hadoop-0.18.3-test.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/hadoop-0.18.3/hadoop-0.18.3-tools.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/janino-2.5.15/janino-2.5.15.jar"/>
+	<classpathentry kind="lib" path="cloudfront-loganalyzer/cloudfront-loganalyzer-1.0.0/lib/jgrapht-jdk1.6/jgrapht-jdk1.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
