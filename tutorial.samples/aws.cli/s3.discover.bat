@@ -1,0 +1,1 @@
+"c:\program files\Amazon\AWSCLI\aws.exe"   s3 ls s3://shudson >D:\workspace\documents\s3.discover.log
