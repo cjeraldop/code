@@ -1,0 +1,12 @@
+{
+"jsonpaths": [
+    "$.data[0,2].EmpID",
+    "$.data[0,2].LastName",
+    "$.data[0,2].FirstName",
+    "$.data[0,2].DOB",
+    "$.data[0,2].SSN",
+    "$.data[0,2].HireDate",
+    "$.data[0,2].City",
+    "$.data[0,2].Address"
+]
+}

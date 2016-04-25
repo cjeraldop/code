@@ -1,0 +1,96 @@
+/*
+Redshift JSON data type
+http://optimalbi.com/blog/2014/04/14/querying-json-data-in-amazon-redshift/
+
+For instance if you have the following JSON data.
+{
+  "stadium_id": 1,
+  "name": "Eden Park",
+  "location":{"city":"Auckland","country":"NZ" },
+  "seats": 60000
+}
+{
+  "stadium_id": 2,
+  "name": "Westpac Stadium",
+  "location":{"city":"Wellington","country":"NZ" },
+  "seats": 35000
+}
+{
+  "stadium_id": 3,
+  "name": "Forsyth Barr Stadium",
+  "location":{"city":"Dunedin","country":"NZ" },
+  "seats": 30000 
+}
+{
+  "stadium_id": 4,
+  "name": "Stadium Australia",
+  "location":{"city":"Sydney","country":"AUS" },
+  "seats": 83000 
+}
+
+*/ 
+DROP TABLE IF EXISTS json_data;
+
+CREATE TABLE IF NOT EXISTS JSON_DATA
+(
+  JSON   VARCHAR(65000)
+);
+
+INSERT INTO JSON_DATA
+(
+  JSON
+)
+VALUES
+(
+  '{ "stadium_id": 1, "name": "Eden Park", "location":{"city":"Auckland","country":"NZ" }, "seats": 60000}'
+);
+
+INSERT INTO JSON_DATA
+(
+  JSON
+)
+VALUES
+(
+  '{ "stadium_id": 2, "name": "Westpac Stadium", "location":{"city":"Wellington","country":"NZ" }, "seats": 35000}'
+);
+
+INSERT INTO JSON_DATA
+(
+  JSON
+)
+VALUES
+(
+  '{ "stadium_id": 3, "name": "Forsyth Barr Stadium", "location":{"city":"Dunedin","country":"NZ" }, "seats": 30000}'
+);
+
+INSERT INTO JSON_DATA
+(
+  JSON
+)
+VALUES
+(
+  '{ "stadium_id": 4, "name": "Stadium Australia", "location":{"city":"Sydney","country":"AUS" }, "seats": 83000 }'
+);
+
+--Using the JSON_EXTRACT_PATH_TEXT function you can write queries like the following to get value from the data
+SELECT JSON_EXTRACT_PATH_TEXT(JSON,'stadium_id') stadium_id,
+       JSON_EXTRACT_PATH_TEXT(JSON,'name') name
+FROM json_data
+ORDER BY 1;
+
+--stadium_id name 1 Eden Park 2 Westpac Stadium 3 Forsyth Barr Stadium 4 Stadium Australia
+SELECT JSON_EXTRACT_PATH_TEXT(JSON,'stadium_id') stadium_id,
+       JSON_EXTRACT_PATH_TEXT(JSON,'name') name
+FROM json_data
+WHERE JSON_EXTRACT_PATH_TEXT(JSON,'seats') > 50000
+AND   JSON_EXTRACT_PATH_TEXT(JSON,'location','country') = 'NZ'
+ORDER BY 1;
+
+--stadium_id name 1 Eden Park Note the PATH element IS CASE sensitive so IF you get the CASE wrong you will get empty strings
+SELECT JSON_EXTRACT_PATH_TEXT(JSON,'stadium_id') stadium_id,
+       JSON_EXTRACT_PATH_TEXT(JSON,'NAME') name
+FROM json_data
+ORDER BY 1;
+
+--stadium_id name 1 2 3 4;
+

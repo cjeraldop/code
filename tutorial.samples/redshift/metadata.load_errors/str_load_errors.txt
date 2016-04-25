@@ -1,0 +1,6 @@
+select distinct tbl, trim(name) as table_name, query, starttime,
+trim(filename) as input, line_number, colname, err_code,
+trim(err_reason) as reason
+from stl_load_errors sl, stv_tbl_perm sp
+where sl.tbl = sp.id
+and sp.name = 'escapes';

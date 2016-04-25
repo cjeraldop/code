@@ -1,0 +1,19 @@
+{
+"user": "user_name",
+"type": "GET",
+"date": "2016-03-22 16:14:13",
+"data": [
+{
+    "EmpID": 3,
+    "LastName": "Smith",
+    "FirstName": "Bob",
+    "DOB": "1910-01-01",
+    "SSN": "123456789",
+    "HireDate": "1910-01-01",
+    "City": "Town",
+    "Address": "123 Abc"
+}
+]
+}
+
+

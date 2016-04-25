@@ -1,0 +1,11 @@
+http://stackoverflow.com/questions/35706832/want-to-connect-redshift-to-r
+
+library (RPostgreSQL)
+drv <- dbDriver("PostgreSQL")
+conn <- dbConnect(drv, host="your.host.us-east-1.redshift.amazonaws.com", 
+             port="5439",
+             dbname="your_db_name", 
+             user="user", 
+             password="password")
+			 
+			 

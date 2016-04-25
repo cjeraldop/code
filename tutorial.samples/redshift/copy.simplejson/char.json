@@ -1,0 +1,5 @@
+{
+  "backslash": "This is a backslash: \\",
+  "newline": "This sentence\n is on two lines.",
+  "tab": "This sentence \t contains a tab."
+}

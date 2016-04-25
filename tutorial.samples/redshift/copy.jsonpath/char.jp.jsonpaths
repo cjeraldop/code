@@ -1,0 +1,9 @@
+{
+    "jsonpaths": [
+        "$.backslash",
+        "$.newline",
+        "$.tab",
+		"$.missing_data"
+		
+    ]
+}
